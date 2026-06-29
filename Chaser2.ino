@@ -1,43 +1,33 @@
-int buzz=2;
-int switchop=12;
+
 void setup()
 {
-  Serial.begin(9600);
-  pinMode(buzz,OUTPUT);
-  pinMode(switchop,INPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
 }
-void loop() 
-{
-  int value=digitalRead(switchop);
-  if(value==1)
-  {
-    tone(buzz, 240); // Sa
-  delay(400);
 
-  tone(buzz, 270); // Re
-  delay(400);
-
-  tone(buzz, 300); // Ga
-  delay(400);
-
-  tone(buzz, 320); // Ma
-  delay(400);
-
-  tone(buzz, 360); // Pa
-  delay(400);
-
-  tone(buzz, 400); // Dha
-  delay(400);
-
-  tone(buzz, 450); // Ni
-  delay(400);
-
-  tone(buzz, 480); // High Sa
-  delay(400);
-
-  }
-  else
-  {
-    noTone(buzz);
-  }
+void loop()
+{ 
+  digitalWrite(2,1);
+  delay(100);
+  digitalWrite(3,1);
+  delay(100);
+  digitalWrite(4,1);
+  delay(100);
+  digitalWrite(5,1);
+  delay(100);
+  digitalWrite(6,1);
+  delay(100);
+  digitalWrite(6,0);
+  delay(100);
+  digitalWrite(5,0);
+  delay(100);
+  digitalWrite(4,0);
+  delay(100);
+  digitalWrite(3,0);
+  delay(100);
+  digitalWrite(2,0);
+  delay(100);
 }
